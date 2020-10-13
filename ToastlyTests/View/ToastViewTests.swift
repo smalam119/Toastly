@@ -10,6 +10,7 @@ import XCTest
 
 class ToastViewTests: XCTestCase {
     
+    // MARK: - Properties
     var sut: ToastView?
 
     // MARK: - Initialisers
@@ -29,6 +30,7 @@ class ToastViewTests: XCTestCase {
         XCTAssertFalse(sut!.subviews.isEmpty, "Subviews should not be empty")
     }
     
+    /// Test required init
     func testInitWithCoder() {
         let cd = NSKeyedUnarchiver(forReadingWith: NSMutableData() as Data)
         let toastView = ToastView(coder:cd)

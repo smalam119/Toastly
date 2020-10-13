@@ -10,6 +10,7 @@ import XCTest
 
 class UIViewControllerExtensionTest: XCTestCase {
     
+    // MARK: - Properties
     var sut: UIViewController?
 
     // MARK: - Initialisers
