@@ -12,6 +12,7 @@ class ToastViewTests: XCTestCase {
     
     var sut: ToastView?
 
+    // MARK: - Initialisers
     override func setUp() {
         super.setUp()
         sut = ToastView()
@@ -22,6 +23,7 @@ class ToastViewTests: XCTestCase {
         sut = nil
     }
     
+    /// Tests commonInit()
     func testCommonInit() {
         sut?.commonInit()
         XCTAssertFalse(sut!.subviews.isEmpty, "Subviews should not be empty")

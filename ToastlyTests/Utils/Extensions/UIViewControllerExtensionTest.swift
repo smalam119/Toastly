@@ -12,6 +12,7 @@ class UIViewControllerExtensionTest: XCTestCase {
     
     var sut: UIViewController?
 
+    // MARK: - Initialisers
     override func setUp() {
         super.setUp()
         sut = UIViewController()
@@ -22,6 +23,7 @@ class UIViewControllerExtensionTest: XCTestCase {
         sut = nil
     }
     
+    /// Tests showToast() function
     func testShowToast() {
         
         // Act
