@@ -28,5 +28,12 @@ class ToastViewTests: XCTestCase {
         sut?.commonInit()
         XCTAssertFalse(sut!.subviews.isEmpty, "Subviews should not be empty")
     }
+    
+    func testInitWithCoder() {
+        let cd = NSKeyedUnarchiver(forReadingWith: NSMutableData() as Data)
+        let toastView = ToastView(coder:cd)
+        XCTAssertNotNil(toastView, "ToastView should not be nil")
+    }
+
 
 }
