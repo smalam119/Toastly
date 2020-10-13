@@ -25,6 +25,8 @@ public class ToastView: UIView {
         let bundle = Bundle(identifier: "com.smalam.Toastly")
         guard let viewFromXib = bundle?.loadNibNamed("ToastView", owner: self, options: nil)?.first as? UIView else {return}
         viewFromXib.frame = self.bounds
+        viewFromXib.layer.cornerRadius = 8
+        viewFromXib.layer.masksToBounds = true
         addSubview(viewFromXib)
     }
 }
