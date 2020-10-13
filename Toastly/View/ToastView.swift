@@ -30,11 +30,3 @@ public class ToastView: UIView {
         addSubview(viewFromXib)
     }
 }
-
-// MARK: - Extensions
-extension UIViewController {
-    public func showToast() {
-        let toast = ToastView(frame: CGRect(x: 20.0, y: 100.0, width: 150.0, height: 35))
-        self.view.addSubview(toast)
-    }
-}
