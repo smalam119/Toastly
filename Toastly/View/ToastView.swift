@@ -29,6 +29,7 @@ class ToastView: UIView {
         viewFromXib.frame = self.bounds
         viewFromXib.layer.cornerRadius = 8
         viewFromXib.layer.masksToBounds = true
+        viewFromXib.translatesAutoresizingMaskIntoConstraints = false
         addSubview(viewFromXib)
     }
     
