@@ -28,7 +28,7 @@ class UIViewControllerExtensionTest: XCTestCase {
     func testShowToast() {
         
         // Act
-        sut?.showToast()
+        sut?.showToast(message: "Test")
         
         // Assert
         XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
