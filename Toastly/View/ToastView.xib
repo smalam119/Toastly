@@ -11,6 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToastView" customModule="Toastly" customModuleProvider="target">
             <connections>
                 <outlet property="messageLabel" destination="9sT-hy-rrw" id="aCp-Ii-ybb"/>
+                <outlet property="messageLabelBottomConstraint" destination="P56-eT-mfK" id="lhj-bO-mLC"/>
+                <outlet property="messageLabelLeadingConstraint" destination="trn-vX-PNS" id="5MK-QX-K0c"/>
+                <outlet property="messageLabelTopConstraint" destination="Ncu-J0-n67" id="URn-5y-0lK"/>
+                <outlet property="messageLabelTrailingConstraint" destination="PIR-fr-Abn" id="dQe-IP-mQI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

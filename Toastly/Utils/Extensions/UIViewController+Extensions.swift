@@ -13,7 +13,9 @@ extension UIViewController {
         let toastView = ToastView()
         toastView.setMessage(message)
         toastView.layoutIfNeeded()
-        let toastPositionHelper = ToastPositionHelper(position: position, toastViewWidthHeight: (toastView.messageLabel.frame.width + 40, height: toastView.messageLabel.frame.height + 40), navigationBarHeight: (self.navigationController?.navigationBar.frame.height), viewControllerFrame: self.view.frame)
+        let messageLabelVerticalMargin = Constants.messageLabelLeadingConstraint + Constants.messageLabelTrailingConstraint
+        let messageLabelHorizontalMargin = Constants.messageLabelTopConstraint + Constants.messageLabelBottomConstraint
+        let toastPositionHelper = ToastPositionHelper(position: position, toastViewWidthHeight: (toastView.messageLabel.frame.width + messageLabelVerticalMargin, height: toastView.messageLabel.frame.height + messageLabelHorizontalMargin), navigationBarHeight: (self.navigationController?.navigationBar.frame.height), viewControllerFrame: self.view.frame)
         toastView.frame.origin = toastPositionHelper.getOrigin()
         self.view.addSubview(toastView)
     }
