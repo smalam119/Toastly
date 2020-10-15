@@ -9,9 +9,12 @@ import UIKit
 
 // MARK: - Extensions
 extension UIViewController {
-    public func showToast(message: String) {
-        let toastView = ToastView(frame: CGRect(x: 20.0, y: 100.0, width: 150.0, height: 35))
+    public func showToast(message: String, position: ToastPositions = .top) {
+        let toastView = ToastView()
         toastView.setMessage(message)
+        toastView.layoutIfNeeded()
+        let toastPositionHelper = ToastPositionHelper(position: position, toastViewWidthHeight: (toastView.messageLabel.frame.width + 40, height: toastView.messageLabel.frame.height + 40), navigationBarHeight: (self.navigationController?.navigationBar.frame.height), viewControllerFrame: self.view.frame)
+        toastView.frame.origin = toastPositionHelper.getOrigin()
         self.view.addSubview(toastView)
     }
 }
