@@ -38,6 +38,8 @@ class ToastPositionHelper {
             return CGPoint(x: getToastViewCenterXAxis(), y: getToastViewCenterYAxis())
         case .custom(let x, let y):
             return CGPoint(x: x,y: y)
+        case .bottom:
+            return CGPoint(x: getToastViewCenterXAxis(), y: getYAxisForBottomPosition())
         default: break
         }
         
@@ -61,6 +63,12 @@ class ToastPositionHelper {
         let navbarHeight = navigationBarHeight ?? Constants.defaultNavigationBarHeight
         let safeAreaTopInset = CGFloat(topPadding ?? Constants.defaultSafeAreaTopInset)
         let y = navbarHeight + safeAreaTopInset + Constants.defaultToastViewTopMargin
+        return y
+    }
+    
+    private func getYAxisForBottomPosition() -> CGFloat {
+        let safeAreaBottomInset = CGFloat(bottomPadding ?? Constants.defaultSafeAreaTopInset)
+        let y = (viewControllerFrame.height - (toastViewWidthHeight.height + safeAreaBottomInset + Constants.defaultToastViewBottomMargin))
         return y
     }
 }
