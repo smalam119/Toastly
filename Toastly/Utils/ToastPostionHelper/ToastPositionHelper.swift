@@ -34,6 +34,8 @@ class ToastPositionHelper {
         switch position {
         case .top:
             return CGPoint(x: getToastViewCenterXAxis(), y: getYAxisForTopPosition())
+        case .center:
+            return CGPoint(x: getToastViewCenterXAxis(), y: getToastViewCenterYAxis())
         case .custom(let x, let y):
             return CGPoint(x: x,y: y)
         default: break
@@ -46,6 +48,12 @@ class ToastPositionHelper {
     private func getToastViewCenterXAxis() -> CGFloat {
         let width = toastViewWidthHeight.width
         return (viewControllerFrame.width - width) / 2
+    }
+    
+    /// Returns the Y axis for center
+    private func getToastViewCenterYAxis() -> CGFloat {
+        let height = toastViewWidthHeight.height
+        return (viewControllerFrame.height - height) / 2
     }
     
     /// Returns Y axis if the position is Top
