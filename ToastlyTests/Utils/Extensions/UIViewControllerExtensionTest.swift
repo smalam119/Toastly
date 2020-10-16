@@ -24,11 +24,22 @@ class UIViewControllerExtensionTest: XCTestCase {
         sut = nil
     }
     
-    /// Tests showToast() function
-    func testShowToast() {
+    /// Tests showToast() function when position is Top
+    func testShowToastPositionTop() {
         
         // Act
-        sut?.showToast(message: "Test")
+        sut?.showToast(message: "Test", position: .top)
+        
+        // Assert
+        XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
+        
+    }
+    
+    /// Tests showToast() function when position is Custom
+    func testShowToastPositionCustom() {
+        
+        // Act
+        sut?.showToast(message: "Test", position: .custom(x: 100, y: 200))
         
         // Assert
         XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
