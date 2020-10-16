@@ -56,5 +56,16 @@ class UIViewControllerExtensionTest: XCTestCase {
         XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
         
     }
+    
+    /// Tests showToast() function when position is Center
+    func testShowToastPositionBottom() {
+        
+        // Act
+        sut?.showToast(message: "Test", position: .bottom)
+        
+        // Assert
+        XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
+        
+    }
 
 }
