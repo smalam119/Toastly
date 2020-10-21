@@ -7,14 +7,14 @@
 
 import UIKit
 
-struct ToastStyle {
+public struct ToastStyle {
     
     // Properties
     var backgroundColor: UIColor?
     var textColor: UIColor?
     
     // Initialiser
-    init(backgroundColor: UIColor = .black, textColor: UIColor = .white) {
+    public init(backgroundColor: UIColor = .black, textColor: UIColor = .white) {
         self.backgroundColor = backgroundColor
         self.textColor = textColor
     }
