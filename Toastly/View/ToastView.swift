@@ -9,6 +9,7 @@ import UIKit
 
 class ToastView: UIView {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet private(set) weak var messageLabel: UILabel!
     @IBOutlet weak var messageLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageLabelLeadingConstraint: NSLayoutConstraint!

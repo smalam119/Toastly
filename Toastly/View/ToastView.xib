@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToastView" customModule="Toastly" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="2pR-zm-cgf" id="uye-7G-IxS"/>
                 <outlet property="messageLabel" destination="9sT-hy-rrw" id="aCp-Ii-ybb"/>
                 <outlet property="messageLabelBottomConstraint" destination="P56-eT-mfK" id="lhj-bO-mLC"/>
                 <outlet property="messageLabelLeadingConstraint" destination="trn-vX-PNS" id="5MK-QX-K0c"/>
