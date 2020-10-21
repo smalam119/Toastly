@@ -44,6 +44,11 @@ class ToastView: UIView {
         messageLabel.text = message
     }
     
+    func setStyle(_ toastStyle: ToastStyle) {
+        containerView.backgroundColor = toastStyle.backgroundColor
+        messageLabel.textColor = toastStyle.textColor
+    }
+    
     private func setConstraintsOnConstants() {
         Constants.messageLabelTopConstraint = messageLabelTopConstraint.constant
         Constants.messageLabelBottomConstraint = messageLabelBottomConstraint.constant

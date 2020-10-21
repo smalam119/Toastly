@@ -54,6 +54,30 @@ class ToastViewTests: XCTestCase {
         // Assert
         XCTAssertEqual(sut!.messageLabel.text, message)
     }
+    
+    func testSetStyle_backgroundColor() {
+        // Arrang
+        var toastStyle = ToastStyle()
+        toastStyle.backgroundColor = .green
+        
+        // Act
+        sut?.setStyle(toastStyle)
+        
+        // Assert
+        XCTAssertEqual(sut?.containerView.backgroundColor, .green, "Background color must be Green")
+    }
+    
+    func testSetStyle_textColor() {
+        // Arrang
+        var toastStyle = ToastStyle()
+        toastStyle.textColor = .white
+        
+        // Act
+        sut?.setStyle(toastStyle)
+        
+        // Assert
+        XCTAssertEqual(sut?.messageLabel.textColor, .white, "Text color must be White")
+    }
 
 
 }
