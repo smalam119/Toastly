@@ -24,6 +24,7 @@
 		CE67A761253886580052DE5F /* ToastPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A760253886580052DE5F /* ToastPositions.swift */; };
 		CE67A765253888020052DE5F /* ToastPositionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A764253888020052DE5F /* ToastPositionHelper.swift */; };
 		CE67A76F2538A0890052DE5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A76E2538A0890052DE5F /* Constants.swift */; };
+		CEC8DCA32549AD2F00D101BD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8DCA22549AD2F00D101BD /* Enums.swift */; };
 		CECA4EDE2535E91700D0F775 /* ToastViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA4EDD2535E91700D0F775 /* ToastViewTests.swift */; };
 		CECA4EE92535F40500D0F775 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA4EE82535F40500D0F775 /* UIViewController+Extensions.swift */; };
 		CECA4EF12535F4D800D0F775 /* UIViewControllerExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA4EF02535F4D800D0F775 /* UIViewControllerExtensionTest.swift */; };
@@ -81,6 +82,7 @@
 		CE67A760253886580052DE5F /* ToastPositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPositions.swift; sourceTree = "<group>"; };
 		CE67A764253888020052DE5F /* ToastPositionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPositionHelper.swift; sourceTree = "<group>"; };
 		CE67A76E2538A0890052DE5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEC8DCA22549AD2F00D101BD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CECA4EDD2535E91700D0F775 /* ToastViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewTests.swift; sourceTree = "<group>"; };
 		CECA4EE82535F40500D0F775 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CECA4EF02535F4D800D0F775 /* UIViewControllerExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTest.swift; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 			path = ToastPostionHelper;
 			sourceTree = "<group>";
 		};
+		CEC8DCA12549AD0200D101BD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CEC8DCA22549AD2F00D101BD /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		CECA4EDC2535E8D400D0F775 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 		CECA4EE62535F3D600D0F775 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CEC8DCA12549AD0200D101BD /* Enums */,
 				CE53BF312540666B00392DFB /* ToastStyle */,
 				CE67A75E253886130052DE5F /* ToastPostionHelper */,
 				CECA4EE72535F3E200D0F775 /* Extensions */,
@@ -401,6 +412,7 @@
 				CE53BF332540668B00392DFB /* ToastStyle.swift in Sources */,
 				CE67A765253888020052DE5F /* ToastPositionHelper.swift in Sources */,
 				CECA4EE92535F40500D0F775 /* UIViewController+Extensions.swift in Sources */,
+				CEC8DCA32549AD2F00D101BD /* Enums.swift in Sources */,
 				CE5413DB2535E055001F4A97 /* ToastView.swift in Sources */,
 				CE67A761253886580052DE5F /* ToastPositions.swift in Sources */,
 			);

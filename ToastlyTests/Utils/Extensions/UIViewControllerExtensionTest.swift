@@ -67,5 +67,25 @@ class UIViewControllerExtensionTest: XCTestCase {
         XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
         
     }
+    
+    /// Gest showTest() function when duration is long
+    func testShowToastDurationLong() {
+        
+        // Act
+        sut?.showToast(message: "Test", duration: .long)
+        
+        // Assert
+        XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
+    }
+    
+    /// Gest showTest() function when duration is short
+    func testShowToastDurationShort() {
+        
+        // Act
+        sut?.showToast(message: "Test", duration: .short)
+        
+        // Assert
+        XCTAssertTrue(sut!.view.subviews.first!.isKind(of: ToastView.self), "First subview must be a ToastView")
+    }
 
 }
