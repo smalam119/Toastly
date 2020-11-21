@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.showToast(message: "This is a Toast This is a Toast This is a Toast This is a Toast This is a Toast ", position: .bottom, duration: .long, toastStyle: ToastStyle(backgroundColor: .yellow, textColor: .black))
+        self.showToast(message: "This is a Toast This is a Toast This is a Toast This is a Toast This is a Toast ", position: .bottom, duration: .long, toastStyle: ToastStyle(backgroundColor: .blue, textColor: .black))
     }
 }
 
