@@ -17,6 +17,29 @@ class ToastView: UIView {
     @IBOutlet weak var messageLabelTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageLabelBottomConstraint: NSLayoutConstraint!
     
+    // MARK: - Properties
+    var style: ToastStyle {
+        get {
+            return .init(
+                backgroundColor: containerView.backgroundColor ?? .black,
+                textColor: messageLabel.textColor ?? .white)
+        }
+        set(toastStyle) {
+            containerView.backgroundColor = toastStyle.backgroundColor
+            messageLabel.textColor = toastStyle.textColor
+        }
+    }
+    
+    var message: String {
+        get {
+            return messageLabel.text ?? ""
+        }
+        
+        set(message) {
+            messageLabel.text = message
+        }
+    }
+    
     // MARK: - Initialisers
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,15 +62,6 @@ class ToastView: UIView {
         addSubview(viewFromXib)
         
         setConstraintsOnConstants()
-    }
-    
-    func setMessage(_ message: String) {
-        messageLabel.text = message
-    }
-    
-    func setStyle(_ toastStyle: ToastStyle) {
-        containerView.backgroundColor = toastStyle.backgroundColor
-        messageLabel.textColor = toastStyle.textColor
     }
     
     private func setConstraintsOnConstants() {

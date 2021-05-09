@@ -49,7 +49,7 @@ class ToastViewTests: XCTestCase {
         let message = "This is a test message"
         
         // Act
-        sut?.setMessage(message)
+        sut?.message = message
         
         // Assert
         XCTAssertEqual(sut!.messageLabel.text, message)
@@ -61,7 +61,7 @@ class ToastViewTests: XCTestCase {
         toastStyle.backgroundColor = .green
         
         // Act
-        sut?.setStyle(toastStyle)
+        sut?.style = toastStyle
         
         // Assert
         XCTAssertEqual(sut?.containerView.backgroundColor, .green, "Background color must be Green")
@@ -73,7 +73,7 @@ class ToastViewTests: XCTestCase {
         toastStyle.textColor = .white
         
         // Act
-        sut?.setStyle(toastStyle)
+        sut?.style = toastStyle
         
         // Assert
         XCTAssertEqual(sut?.messageLabel.textColor, .white, "Text color must be White")

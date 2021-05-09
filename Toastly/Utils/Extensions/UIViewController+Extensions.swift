@@ -12,8 +12,8 @@ extension UIViewController {
     // MARK: - Methods
     public func showToast(message: String, position: ToastPositions = .top, duration: ToastDuration = .short, toastStyle: ToastStyle = .init()) {
         let toastView = ToastView()
-        toastView.setMessage(message)
-        toastView.setStyle(toastStyle)
+        toastView.message = message
+        toastView.style = toastStyle
         toastView.alpha = 1
         toastView.layoutIfNeeded()
         let messageLabelVerticalMargin = Constants.messageLabelLeadingConstraint + Constants.messageLabelTrailingConstraint

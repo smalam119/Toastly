@@ -9,11 +9,11 @@ import UIKit
 
 public struct ToastStyle {
     
-    // Properties
+    // MARK: - Properties
     var backgroundColor: UIColor?
     var textColor: UIColor?
     
-    // Initialiser
+    // MARK: - Initialiser
     public init(backgroundColor: UIColor = .black, textColor: UIColor = .white) {
         self.backgroundColor = backgroundColor
         self.textColor = textColor
