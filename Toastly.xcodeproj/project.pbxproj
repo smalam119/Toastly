@@ -21,7 +21,6 @@
 		CE5413D32535DD5B001F4A97 /* Toastly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE54139A2535DD00001F4A97 /* Toastly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE5413DB2535E055001F4A97 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5413DA2535E055001F4A97 /* ToastView.swift */; };
 		CE5413E12535E0A9001F4A97 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5413E02535E0A9001F4A97 /* ToastView.xib */; };
-		CE67A761253886580052DE5F /* ToastPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A760253886580052DE5F /* ToastPositions.swift */; };
 		CE67A765253888020052DE5F /* ToastPositionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A764253888020052DE5F /* ToastPositionHelper.swift */; };
 		CE67A76F2538A0890052DE5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A76E2538A0890052DE5F /* Constants.swift */; };
 		CEC8DCA32549AD2F00D101BD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8DCA22549AD2F00D101BD /* Enums.swift */; };
@@ -79,7 +78,6 @@
 		CE5413CA2535DD3A001F4A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5413DA2535E055001F4A97 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		CE5413E02535E0A9001F4A97 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
-		CE67A760253886580052DE5F /* ToastPositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPositions.swift; sourceTree = "<group>"; };
 		CE67A764253888020052DE5F /* ToastPositionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPositionHelper.swift; sourceTree = "<group>"; };
 		CE67A76E2538A0890052DE5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CEC8DCA22549AD2F00D101BD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 		CE67A75E253886130052DE5F /* ToastPostionHelper */ = {
 			isa = PBXGroup;
 			children = (
-				CE67A760253886580052DE5F /* ToastPositions.swift */,
 				CE67A764253888020052DE5F /* ToastPositionHelper.swift */,
 			);
 			path = ToastPostionHelper;
@@ -414,7 +411,6 @@
 				CECA4EE92535F40500D0F775 /* UIViewController+Extensions.swift in Sources */,
 				CEC8DCA32549AD2F00D101BD /* Enums.swift in Sources */,
 				CE5413DB2535E055001F4A97 /* ToastView.swift in Sources */,
-				CE67A761253886580052DE5F /* ToastPositions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

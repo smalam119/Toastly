@@ -5,7 +5,7 @@
 //  Created by Sayed Mahmudul Alam on 10/28/20.
 //
 
-import Foundation
+import UIKit
 
 public enum ToastDuration {
     case long
@@ -22,4 +22,11 @@ public enum ToastDuration {
             return duration
         }
     }
+}
+
+public enum ToastPositions {
+    case top
+    case bottom
+    case center
+    case custom(x: CGFloat, y: CGFloat)
 }
