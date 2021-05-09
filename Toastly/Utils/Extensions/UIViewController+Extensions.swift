@@ -21,7 +21,7 @@ extension UIViewController {
         let toastPositionHelper = ToastPositionHelper(position: position, toastViewWidthHeight: (toastView.messageLabel.frame.width + messageLabelVerticalMargin, height: toastView.messageLabel.frame.height + messageLabelHorizontalMargin), navigationBarHeight: (navigationController?.navigationBar.frame.height), viewControllerFrame: view.frame)
         toastView.frame.origin = toastPositionHelper.getOrigin()
         view.addSubview(toastView)
-        UIView.animate(withDuration: 2.0, delay: duration.rawValue, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 2.0, delay: duration.duration, options: .curveEaseOut, animations: {
             toastView.alpha = 0.0
         }, completion: { _ in
             toastView.removeFromSuperview()
