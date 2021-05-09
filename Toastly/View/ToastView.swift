@@ -9,6 +9,7 @@ import UIKit
 
 class ToastView: UIView {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet private(set) weak var messageLabel: UILabel!
     @IBOutlet weak var messageLabelTopConstraint: NSLayoutConstraint!
@@ -27,7 +28,7 @@ class ToastView: UIView {
         commonInit()
     }
     
-    // MARK: - Functions
+    // MARK: - Methods
     func commonInit() {
         let bundle = Bundle(identifier: "com.smalam.Toastly")
         guard let viewFromXib = bundle?.loadNibNamed("ToastView", owner: self, options: nil)?.first as? UIView else {return}

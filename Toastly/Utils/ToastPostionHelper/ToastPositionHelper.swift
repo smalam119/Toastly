@@ -29,21 +29,20 @@ class ToastPositionHelper {
         bottomPadding = window?.safeAreaInsets.bottom
     }
     
-    // MARK: - Functions
+    // MARK: - Methods
     func getOrigin() -> CGPoint {
         switch position {
         case .top:
             return CGPoint(x: getToastViewCenterXAxis(), y: getYAxisForTopPosition())
         case .center:
             return CGPoint(x: getToastViewCenterXAxis(), y: getToastViewCenterYAxis())
-        case .custom(let x, let y):
-            return CGPoint(x: x,y: y)
         case .bottom:
             return CGPoint(x: getToastViewCenterXAxis(), y: getYAxisForBottomPosition())
-        default: break
+        case .custom(let x, let y):
+            return CGPoint(x: x,y: y)
+        default:
+            return CGPoint(x: getToastViewCenterXAxis(), y: getYAxisForTopPosition())
         }
-        
-        return CGPoint(x: getToastViewCenterXAxis(), y: getYAxisForTopPosition())
     }
     
     /// Returns the X axis for center
@@ -66,6 +65,7 @@ class ToastPositionHelper {
         return y
     }
     
+    /// Returns Y axis if the position is Bottom
     private func getYAxisForBottomPosition() -> CGFloat {
         let safeAreaBottomInset = CGFloat(bottomPadding ?? Constants.defaultSafeAreaTopInset)
         let y = (viewControllerFrame.height - (toastViewWidthHeight.height + safeAreaBottomInset + Constants.defaultToastViewBottomMargin))
