@@ -10,12 +10,12 @@ import UIKit
 class ToastPositionHelper {
     
     // MARK: - Properties
-    var position: ToastPositions?
-    var toastViewWidthHeight: (width: CGFloat, height: CGFloat)
-    var navigationBarHeight: CGFloat?
-    var viewControllerFrame: CGRect
-    var topPadding: CGFloat?
-    var bottomPadding: CGFloat?
+    private let position: ToastPositions?
+    private let toastViewWidthHeight: (width: CGFloat, height: CGFloat)
+    private let navigationBarHeight: CGFloat?
+    private let viewControllerFrame: CGRect
+    private let topPadding: CGFloat?
+    private let bottomPadding: CGFloat?
     
     // MARK: - Initialisers
     required init(position: ToastPositions, toastViewWidthHeight: (width: CGFloat, height: CGFloat), navigationBarHeight: CGFloat?, viewControllerFrame: CGRect) {
