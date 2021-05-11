@@ -18,8 +18,7 @@ extension UIViewController {
         toastView.layoutIfNeeded()
         let messageLabelVerticalMargin = Constants.messageLabelLeadingConstraint + Constants.messageLabelTrailingConstraint
         let messageLabelHorizontalMargin = Constants.messageLabelTopConstraint + Constants.messageLabelBottomConstraint
-        let toastPositionHelper = ToastPositionHelper(position: position, toastViewWidthHeight: (toastView.messageLabel.frame.width + messageLabelVerticalMargin, height: toastView.messageLabel.frame.height + messageLabelHorizontalMargin), navigationBarHeight: (navigationController?.navigationBar.frame.height), viewControllerFrame: view.frame)
-        toastView.frame.origin = toastPositionHelper.getOrigin()
+        toastView.frame.origin = position.getOrigin(toastViewWidthHeight: (toastView.messageLabel.frame.width + messageLabelVerticalMargin, height: toastView.messageLabel.frame.height + messageLabelHorizontalMargin), navigationBarHeight: (navigationController?.navigationBar.frame.height), viewControllerFrame: view.frame)
         view.addSubview(toastView)
         UIView.animate(withDuration: 2.0, delay: duration.duration, options: .curveEaseOut, animations: {
             toastView.alpha = 0.0

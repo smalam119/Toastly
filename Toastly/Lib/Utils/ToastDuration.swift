@@ -1,11 +1,11 @@
 //
-//  Enums.swift
+//  ToastDuration.swift
 //  Toastly
 //
-//  Created by Sayed Mahmudul Alam on 10/28/20.
+//  Created by Sayed Mahmudul Alam on 5/12/21.
 //
 
-import UIKit
+import Foundation
 
 public enum ToastDuration {
     case long
@@ -22,11 +22,4 @@ public enum ToastDuration {
             return duration
         }
     }
-}
-
-public enum ToastPositions {
-    case top
-    case bottom
-    case center
-    case custom(x: CGFloat, y: CGFloat)
 }
