@@ -22,11 +22,14 @@ class ToastView: UIView {
         get {
             return .init(
                 backgroundColor: containerView.backgroundColor ?? .black,
-                textColor: messageLabel.textColor ?? .white)
+                textColor: messageLabel.textColor ?? .white,
+                font: messageLabel.font
+            )
         }
         set(toastStyle) {
             containerView.backgroundColor = toastStyle.backgroundColor
             messageLabel.textColor = toastStyle.textColor
+            messageLabel.font = toastStyle.font
         }
     }
     
