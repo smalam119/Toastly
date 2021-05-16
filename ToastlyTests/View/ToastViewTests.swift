@@ -43,7 +43,7 @@ class ToastViewTests: XCTestCase {
         XCTAssertNotNil(toastView, "ToastView should not be nil")
     }
     
-    /// Test setMessage()
+    /// Test set message
     func testSetMessage() {
         // Arrenge
         let message = "This is a test message"
@@ -53,6 +53,30 @@ class ToastViewTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(sut!.messageLabel.text, message)
+    }
+    
+    /// Test get message
+    func testGetMessage() {
+        // Arrenge
+        let message = "This is a test message"
+        
+        // Act
+        sut?.message = message
+        
+        // Assert
+        XCTAssertEqual(sut!.message, message)
+    }
+    
+    /// Test get message
+    func testGetMessageWhenNil() {
+        // Arrenge
+        let message: String? = nil
+        
+        // Act
+        sut?.messageLabel.text = message
+        
+        // Assert
+        XCTAssertEqual(sut!.message, "")
     }
     
     func testSetStyle_backgroundColor() {
@@ -66,6 +90,22 @@ class ToastViewTests: XCTestCase {
         XCTAssertEqual(sut?.containerView.backgroundColor, .green, "Background color must be Green")
     }
     
+    func testGetStyle_backgroundColor() {
+        // Act
+        sut?.containerView.backgroundColor = .green
+        
+        // Assert
+        XCTAssertEqual(sut?.style.backgroundColor, .green, "Background color must be Green")
+    }
+    
+    func testGetStyle_backgroundColor_nil() {
+        // Act
+        sut?.containerView.backgroundColor = nil
+        
+        // Assert
+        XCTAssertEqual(sut?.style.backgroundColor, .black, "Background color must be black")
+    }
+    
     func testSetStyle_textColor() {
         // Arrang
         let toastStyle = ToastStyle(textColor: .white)
@@ -77,12 +117,28 @@ class ToastViewTests: XCTestCase {
         XCTAssertEqual(sut?.messageLabel.textColor, .white, "Text color must be White")
     }
     
+    func testGetStyle_textColor() {
+        // Act
+        sut?.messageLabel.textColor = .white
+        
+        // Assert
+        XCTAssertEqual(sut?.style.textColor, .white, "Text color must be White")
+    }
+    
     func testSetStyle_textFont() {
         let toastStyle = ToastStyle(font: UIFont(name: "ChalkDuster", size: 18)!)
         
         sut?.style = toastStyle
         
         XCTAssertEqual(sut?.messageLabel.font, UIFont(name: "ChalkDuster", size: 18), "Text font must be ChalkDuster")
+    }
+    
+    func testGetStyle_textFont() {
+        // Act
+        sut?.messageLabel.font = UIFont(name: "ChalkDuster", size: 18)
+        
+        // Assert
+        XCTAssertEqual(sut?.style.font, UIFont(name: "ChalkDuster", size: 18), "Text font must be ChalkDuster")
     }
 
 
