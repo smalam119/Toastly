@@ -14,6 +14,13 @@ public enum ToastPositions {
     case custom(x: CGFloat, y: CGFloat)
     
     // MARK: - Methods
+    
+    /// Calculates the origin of the ToastView.
+    /// - Parameters:
+    ///   - toastViewWidthHeight: Width and Height tuple of the ToastView.
+    ///   - navigationBarHeight: Navigation bar height of the ViewController the ToastView will be displayed over.
+    ///   - viewControllerFrame: Frame of the ViewController the ToastView will be displayed over.
+    /// - Returns: The origin of the ToastView.
     func getOrigin(toastViewWidthHeight: (width: CGFloat, height: CGFloat), navigationBarHeight: CGFloat?, viewControllerFrame: CGRect) -> CGPoint {
         switch self {
         case .top:
@@ -27,17 +34,27 @@ public enum ToastPositions {
         }
     }
     
-    /// Returns the X axis for center
+    /// Calculates the X axis of the ToastView origin
+    /// - Parameters:
+    ///   - toastViewWidth: Width of the ToastView
+    ///   - viewControllerWidth: Width of the ViewController the ToastView will be displayed over.
+    /// - Returns: The X axis of the ToastView origin
     private func getToastViewCenterXAxis(toastViewWidth: CGFloat, viewControllerWidth: CGFloat) -> CGFloat {
         return (viewControllerWidth - toastViewWidth) / 2
     }
     
-    /// Returns the Y axis for center
+    /// Calculates the Y axis of the ToastView origin
+    /// - Parameters:
+    ///   - toastViewHeight: Height of the ToastView
+    ///   - viewControllerHeight: Height of the ViewController the ToastView will be displayed over.
+    /// - Returns: The Y axis of the ToastView origin
     private func getToastViewCenterYAxis(toastViewHeight: CGFloat, viewControllerHeight: CGFloat) -> CGFloat {
         return (viewControllerHeight - toastViewHeight) / 2
     }
     
-    /// Returns Y axis if the position is Top
+    /// Calculates the Y axis if the position is Top
+    /// - Parameter navigationBarHeight: Navigation bar height of the ViewController the ToastView will be displayed over.
+    /// - Returns: The Y axis if the position is Top
     private func getYAxisForTopPosition(navigationBarHeight: CGFloat?) -> CGFloat {
         let navbarHeight = navigationBarHeight ?? Constants.defaultNavigationBarHeight
         let window = UIApplication.shared.keyWindow
@@ -47,7 +64,11 @@ public enum ToastPositions {
         return y
     }
     
-    /// Returns Y axis if the position is Bottom
+    /// Calculates The Y axis if the position is Bottom
+    /// - Parameters:
+    ///   - toastViewHeight: Height of the ToastView
+    ///   - viewControllerHeight: Height of the ViewController the ToastView will be displayed over.
+    /// - Returns: The Y axis if the position is Bottom
     private func getYAxisForBottomPosition(toastViewHeight: CGFloat, viewControllerHeight: CGFloat) -> CGFloat {
         let window = UIApplication.shared.keyWindow
         let bottomPadding = window?.safeAreaInsets.bottom

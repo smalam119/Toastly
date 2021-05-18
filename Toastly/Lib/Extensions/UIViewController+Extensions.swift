@@ -10,6 +10,12 @@ import UIKit
 // MARK: - Extensions
 extension UIViewController {
     // MARK: - Methods
+    /// Consumable method to show the Toast, used by a app project.
+    /// - Parameters:
+    ///   - message: Text that will be displayed on the ToastView.
+    ///   - position: Position of the ToastView.
+    ///   - duration: Amout of time the ToastView will be shown.
+    ///   - toastStyle: Style of the ToastView
     public func showToast(message: String, position: ToastPositions = .top, duration: ToastDuration = .short, toastStyle: ToastStyle = .init()) {
         let toastView = ToastView()
         toastView.message = message
