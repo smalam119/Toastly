@@ -57,7 +57,7 @@ public enum ToastPositions {
     /// - Returns: The Y axis if the position is Top
     private func getYAxisForTopPosition(navigationBarHeight: CGFloat?) -> CGFloat {
         let navbarHeight = navigationBarHeight ?? Constants.defaultNavigationBarHeight
-        let window = UIApplication.shared.keyWindow
+        let window = UIWindow.key
         let topPadding = window?.safeAreaInsets.top
         let safeAreaTopInset = CGFloat(topPadding ?? Constants.defaultSafeAreaTopInset)
         let y = navbarHeight + safeAreaTopInset + Constants.defaultToastViewTopMargin
@@ -70,7 +70,7 @@ public enum ToastPositions {
     ///   - viewControllerHeight: Height of the ViewController the ToastView will be displayed over.
     /// - Returns: The Y axis if the position is Bottom
     private func getYAxisForBottomPosition(toastViewHeight: CGFloat, viewControllerHeight: CGFloat) -> CGFloat {
-        let window = UIApplication.shared.keyWindow
+        let window = UIWindow.key
         let bottomPadding = window?.safeAreaInsets.bottom
         let safeAreaBottomInset = CGFloat(bottomPadding ?? Constants.defaultSafeAreaTopInset)
         let y = (viewControllerHeight - (toastViewHeight + safeAreaBottomInset + Constants.defaultToastViewBottomMargin))

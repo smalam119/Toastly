@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		408FC71829FE5BF200B0E3E8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408FC71729FE5BF200B0E3E8 /* UIWindow.swift */; };
 		CE22C781264AED18006E180E /* ToastDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22C780264AED18006E180E /* ToastDuration.swift */; };
 		CE22C785264AED71006E180E /* ToastPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22C784264AED71006E180E /* ToastPositions.swift */; };
 		CE53BF2C2540645700392DFB /* ToastStyleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53BF2B2540645700392DFB /* ToastStyleTest.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		408FC71729FE5BF200B0E3E8 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		CE22C780264AED18006E180E /* ToastDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDuration.swift; sourceTree = "<group>"; };
 		CE22C784264AED71006E180E /* ToastPositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPositions.swift; sourceTree = "<group>"; };
 		CE53BF2B2540645700392DFB /* ToastStyleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyleTest.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				CECA4EE82535F40500D0F775 /* UIViewController+Extensions.swift */,
+				408FC71729FE5BF200B0E3E8 /* UIWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408FC71829FE5BF200B0E3E8 /* UIWindow.swift in Sources */,
 				CE67A76F2538A0890052DE5F /* Constants.swift in Sources */,
 				CE53BF332540668B00392DFB /* ToastStyle.swift in Sources */,
 				CECA4EE92535F40500D0F775 /* UIViewController+Extensions.swift in Sources */,

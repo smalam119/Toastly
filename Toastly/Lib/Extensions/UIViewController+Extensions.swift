@@ -32,4 +32,13 @@ extension UIViewController {
             toastView.removeFromSuperview()
         })
     }
+    
+    /// Hides all toast immediately
+    public func hideAllToast() {
+        view.subviews.forEach { view in
+            if view is ToastView {
+                view.removeFromSuperview()
+            }
+        }
+    }
 }
