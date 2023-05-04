@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ToastlyPackage
+@testable import Toastly
 
 class UIViewControllerExtensionTest: XCTestCase {
     

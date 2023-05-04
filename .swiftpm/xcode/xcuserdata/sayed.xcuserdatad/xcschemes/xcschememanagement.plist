@@ -4,14 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ToastlyPackage.xcscheme_^#shared#^_</key>
+		<key>Toastly.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ToastlyPackage.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>Toastly</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ToastlyPackage</key>
 		<dict>
 			<key>primary</key>
@@ -23,6 +33,21 @@
 			<true/>
 		</dict>
 		<key>ToastlyPackage_ToastlyPackage</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ToastlyTests</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>Toastly_Toastly</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>Toastly_ToastlyPackage</key>
 		<dict>
 			<key>primary</key>
 			<true/>
