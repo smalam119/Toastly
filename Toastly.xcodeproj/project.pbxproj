@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40259DE32A03B6BD00BE5085 /* ToastlyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 40259DE22A03B6BD00BE5085 /* ToastlyPackage */; };
 		408FC71829FE5BF200B0E3E8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408FC71729FE5BF200B0E3E8 /* UIWindow.swift */; };
 		CE22C781264AED18006E180E /* ToastDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22C780264AED18006E180E /* ToastDuration.swift */; };
 		CE22C785264AED71006E180E /* ToastPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22C784264AED71006E180E /* ToastPositions.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40259DDB2A03B4CC00BE5085 /* ToastlyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ToastlyPackage; sourceTree = "<group>"; };
 		408FC71729FE5BF200B0E3E8 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		CE22C780264AED18006E180E /* ToastDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDuration.swift; sourceTree = "<group>"; };
 		CE22C784264AED71006E180E /* ToastPositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPositions.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40259DE32A03B6BD00BE5085 /* ToastlyPackage in Frameworks */,
 				CE5413D22535DD5B001F4A97 /* Toastly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +137,7 @@
 		CE5413902535DCFF001F4A97 = {
 			isa = PBXGroup;
 			children = (
+				40259DDB2A03B4CC00BE5085 /* ToastlyPackage */,
 				CE54139C2535DD00001F4A97 /* Toastly */,
 				CE5413A72535DD00001F4A97 /* ToastlyTests */,
 				CE5413BB2535DD37001F4A97 /* ToastlyExample */,
@@ -322,6 +326,9 @@
 				CE5413D52535DD5B001F4A97 /* PBXTargetDependency */,
 			);
 			name = ToastlyExample;
+			packageProductDependencies = (
+				40259DE22A03B6BD00BE5085 /* ToastlyPackage */,
+			);
 			productName = ToastlyExample;
 			productReference = CE5413BA2535DD37001F4A97 /* ToastlyExample.app */;
 			productType = "com.apple.product-type.application";
@@ -750,6 +757,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40259DE22A03B6BD00BE5085 /* ToastlyPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ToastlyPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE5413912535DCFF001F4A97 /* Project object */;
 }

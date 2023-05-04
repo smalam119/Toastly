@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Toastly
+import ToastlyPackage
 
 class ViewController: UIViewController {
 
