@@ -81,3 +81,7 @@ Go to Xcode -> File -> Add Packages and use below url to search for the package.
 ```swift
 https://github.com/smalam119/Toastly
 ```
+
+## License
+
+Toastly is released under the MIT license. [See LICENSE](https://github.com/smalam119/Toastly/blob/main/LICENSE) for details.
