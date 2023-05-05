@@ -2,9 +2,23 @@
 
 Show customisable Toast on your app 
 
+# Set Up
+
+Toastly has two function of it's own. Both of then can be accessed inside a `UIViewController`
+
+1. To show a toast use below code inside a `UIViewController`
+
+		self.showToast(message: "This is an inedible Toast", position: .top)
+
+2. Below function can be used to hide all toast
+
+		self.hideAllToast()
+        
+** Check the `Feature` section to add various configurations
+
 # Features
 
-1. Toast can be shown at different positions:
+1. **Toast can be shown at different positions of the screen:**
 
     Top: 
 
@@ -34,7 +48,7 @@ Show customisable Toast on your app
 
   
 
-2. Add duration of your choice
+2. **Add duration of your choice**
 
     Short:
 
@@ -56,7 +70,7 @@ Show customisable Toast on your app
 
   
 
-3. Customise the UI as you like
+3. **Customise the UI as you like**
 
     Orange:
 
